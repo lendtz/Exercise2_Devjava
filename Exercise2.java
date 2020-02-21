@@ -71,11 +71,22 @@ public class Exercise2{
 	  for(int i: even){
 		  System.out.print(" "+i);
 	  }
+	   System.out.println();
+	   System.out.println();
   }
 	  
 	  public static void printPattern(){
-		  for(int i=0;i<20;i++){
-			  
+		  int middle = 9;
+		  StringBuilder asterisk = new StringBuilder();
+		  asterisk.append("*");
+		  for(int row=0;row<20;row++){
+			  for(int column=0;column<=row;column++ ){
+				  if(row < 9 && column==row){
+					  System.out.println(asterisk);
+				  }else{
+					  System.out.print(" ");
+			  }
+		  }
 		  }
   }
   
@@ -107,5 +118,9 @@ public class Exercise2{
 	   
 	   //sending a list of numbers to be separated in Odds and even.
 	   Exercise2.separatedListOfNumber(2,5,8,1,81,23,45,6);
+	   
+	   //Printing pattern.
+	   Exercise2.printPattern();
+	   
   }
 }
