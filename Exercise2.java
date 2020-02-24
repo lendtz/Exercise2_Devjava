@@ -79,15 +79,24 @@ public class Exercise2{
 		  int middle = 9;
 		  StringBuilder asterisk = new StringBuilder();
 		  asterisk.append("*");
-		  for(int row=0;row<20;row++){
+		  for(int row=0;row<middle;row++){
 			  for(int column=0;column<=row;column++ ){
-				  if(row < 9 && column==row){
+				  if(column==row){
 					  System.out.println(asterisk);
 				  }else{
 					  System.out.print(" ");
 			  }
 		  }
 		  }
+		  for(int row=middle;row>=0;row--){
+			  for(int column=0;column<=row;column++){
+				 if(column==row){
+					  System.out.println(asterisk);
+				  }else{
+					  System.out.print(" ");
+			  }   
+			  }
+		  } 
   }
   
   public static void main(String args[]){
@@ -120,6 +129,7 @@ public class Exercise2{
 	   Exercise2.separatedListOfNumber(2,5,8,1,81,23,45,6);
 	   
 	   //Printing pattern.
+	   System.out.println("Printing pattern.\n");
 	   Exercise2.printPattern();
 	   
   }
